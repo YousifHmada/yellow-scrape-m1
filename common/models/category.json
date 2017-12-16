@@ -1,0 +1,50 @@
+{
+  "name": "category",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+   "crawl": {
+      "accepts": [
+        {
+          "arg": "name",
+          "type": "string",
+          "required": true,
+          "description": "the name of the category to be crawled",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
+          "arg": "allow_deep_digging",
+          "type": "boolean",
+          "required": true,
+          "default": false,
+          "description": "this should be false by default and when you allow it you tell the driver to do more complex crawling and extract much deeper data",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "results",
+          "type": "array"
+        },       
+        {
+          "arg": "time",
+          "type": "string"
+        }
+      ],
+      "http": {
+        "verb": "get"
+      }
+    }
+  }
+}

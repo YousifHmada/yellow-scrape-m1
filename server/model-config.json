@@ -13,8 +13,12 @@
       "./mixins"
     ]
   },
-  "category": {
+  "functions": {
     "dataSource": null,
+    "public": true
+  },
+  "category": {
+    "dataSource": "elephantSql",
     "public": true
   }
 }

@@ -1,1 +1,22 @@
-{}
+{
+  "db": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "mysql://root:@localhost/yellow-scrape",
+    "database": "yellow-scrape",
+    "password": "",
+    "name": "db",
+    "user": "root",
+    "connector": "mysql"
+  },
+  "elephantSql": {
+    "host": "horton.elephantsql.com",
+    "port": 5432,
+    "url": "postgres://gheqtbls:itRnq6U6I6Reqt5ltEOlAAinWtCsVKNK@horton.elephantsql.com:5432/gheqtbls",
+    "database": "gheqtbls",
+    "password": "itRnq6U6I6Reqt5ltEOlAAinWtCsVKNK",
+    "name": "elephantSql",
+    "user": "gheqtbls",
+    "connector": "postgresql"
+  }
+}

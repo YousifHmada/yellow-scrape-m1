@@ -1,0 +1,10 @@
+/*"db": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "mysql://root:@localhost/yellow-scrape",
+    "database": "yellow-scrape",
+    "password": "",
+    "name": "db",
+    "user": "root",
+    "connector": "mysql"
+  },*/

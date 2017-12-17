@@ -1,0 +1,51 @@
+{
+  "name": "shop",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "about": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "ratingTotal": {
+      "type": "number"
+    },
+    "photos": {
+      "type": "string"
+    },
+    "menus": {
+      "type": "string"
+    },
+    "branches": {
+      "type": "string"
+    },
+    "reviews": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

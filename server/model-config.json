@@ -20,5 +20,9 @@
   "category": {
     "dataSource": "elephantSql",
     "public": true
+  },
+  "shop": {
+    "dataSource": "elephantSql",
+    "public": true
   }
 }

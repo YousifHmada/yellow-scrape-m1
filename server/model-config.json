@@ -13,16 +13,12 @@
       "./mixins"
     ]
   },
-  "functions": {
-    "dataSource": null,
-    "public": true
-  },
-  "category": {
-    "dataSource": "elephantSql",
-    "public": true
-  },
   "shop": {
     "dataSource": "elephantSql",
+    "public": true
+  },
+  "functions": {
+    "dataSource": null,
     "public": true
   }
 }

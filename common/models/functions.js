@@ -3,7 +3,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 module.exports = function(functions) {
-	functions.crawl = function (name, dD, cb) {
+	functions.crawl = function (name, dD, store_data, cb) {
 		let $ = '';
 		axios.get('https://www.yellowpages.com.eg/en/category/' + name).then((response)=>{
 			$ = cheerio.load(response.data, {
@@ -30,7 +30,8 @@ module.exports = function(functions) {
 			return axios.post('https://yellow-scrape-m2.herokuapp.com/',{
 				category: name,
 				numberPages,
-				allow_deep_digging: dD
+				allow_deep_digging: dD,
+				store_data
 			});
 		}).then((response)=>{
 			cb(null, response.data.results, response.data.time);

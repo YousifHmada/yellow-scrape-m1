@@ -30,6 +30,16 @@
           "http": {
             "source": "query"
           }
+        },
+        {
+          "arg": "store_data",
+          "type": "boolean",
+          "required": true,
+          "default": false,
+          "description": "a flag to allow writing into the database",
+          "http": {
+            "source": "query"
+          }
         }
       ],
       "returns": [

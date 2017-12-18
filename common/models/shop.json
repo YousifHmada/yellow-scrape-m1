@@ -19,6 +19,9 @@
     "image": {
       "type": "string"
     },
+    "phones": {
+      "type": "string"
+    },
     "keywords": {
       "type": "string"
     },

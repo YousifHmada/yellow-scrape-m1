@@ -22,6 +22,15 @@
           }
         },
         {
+          "arg": "max_number_pages",
+          "type": "string",
+          "required": false,
+          "description": "the max number of pages to be crawled, leave it blank in case you want to crawl all pages",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
           "arg": "allow_deep_digging",
           "type": "boolean",
           "required": true,

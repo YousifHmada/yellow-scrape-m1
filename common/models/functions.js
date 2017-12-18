@@ -6,7 +6,7 @@ module.exports = function(functions) {
 	//name: name of the category
 	//dD: deep_digging flag
 	//store_data flag to allow Writing back in db
-	functions.crawl = function (name, dD, store_data, cb) {
+	functions.crawl = function (name, max_number_pages, dD, store_data, cb) {
 		let $ = '';
 		//making a request to fetch the first page and crawl the number of pages
 		axios.get('https://www.yellowpages.com.eg/en/category/' + name).then((response)=>{
@@ -31,10 +31,13 @@ module.exports = function(functions) {
 			};
 		}).then((numberPages)=>{
 			//making a request to the second machine after calculating the numberPages
-			console.log("number of pages ",numberPages);
+			//console.log("number of pages ",numberPages);
+			if(max_number_pages == null){
+				max_number_pages = numberPages;
+			}
 			return axios.post('https://yellow-scrape-m2.herokuapp.com/',{
 				category: name,
-				numberPages,
+				numberPages: (numberPages >= max_number_pages) ? max_number_pages : numberPages,
 				allow_deep_digging: dD,
 				store_data
 			});

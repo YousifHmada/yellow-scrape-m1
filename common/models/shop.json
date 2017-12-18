@@ -42,6 +42,9 @@
     },
     "reviews": {
       "type": "string"
+    },
+    "mapUrl": {
+      "type": "string"
     }
   },
   "validations": [],
